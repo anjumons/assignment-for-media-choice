@@ -1,0 +1,16 @@
+@font-face{
+    font-family: Abel;
+    src:url('../fonts/Abel/Abel-Regular.ttf')
+}
+@font-face{
+    font-family: Dancing;
+    src:url('../fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf')
+}
+@font-face{
+    font-family: Open-Sans;
+    src:url('../fonts/Open_Sans_Condensed/OpenSansCondensed-Bold.ttf')
+}
+@font-face{
+    font-family: Roboto;
+    src:url('../fonts/Roboto/Roboto-BoldItalic.ttf')
+}

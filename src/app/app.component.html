@@ -1,21 +1,327 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
 
-<router-outlet></router-outlet>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+</head>
+
+<body>
+    <nav class="navbar">
+      <div class="logo">OUTTvApp</div>
+
+      <div class="topnav-centered">
+        <ul>
+          <li class="border-right"><a href=""></a>Videos</li>
+          <li  class="border-right"><a href=""></a>HLIFE</li>
+          <li><a href=""></a>Extra</li>
+          </ul>
+      </div>
+
+      <div class="topnav-right">
+        <ul>
+          <li><a> <i class="fa fa-search"></i></a></li>
+          <li class="user"><a >Assessment <i class="fa fa-user"></i></a>
+          <ul class="dropdown">
+            <li class="changemode"><a >Darkmode</a></li>
+            <li><a>Settings </a></li>
+          </ul>
+          </li>
+          </ul>
+      </div>
+      </nav>
+
+  <!-- ------------x---------------  Navigation --------------------------x-------------->
+  <!-- --------------------------main section-------------------------------------------->
+  <main>
+    <div class="banner-container">
+      <div class="slideshow-container">
+        <div class="left-arrow-box" (click)="this.moveSlides(-1)"><span class="arrow arrow-left"></span></div>
+        <div class="right-arrow-box" (click)="this.moveSlides(1)"><span class="arrow arrow-right"></span></div>
+        <div class="captionTextHolder">
+          <p class="captionText1 slideTextFromTop"></p>
+          <p class="captionText2 slideTextFromBottom "></p>
+          <button class="watch-btn btn-animation">Watch now !</button>
+        </div>
+        <div class="image-holder">
+          <img src="https://www.maxx-xs.nl/images/visuals/visual_mxmid_279806.jpeg">
+          <p class="caption-text-1">Dropping the soap</p>
+          <p class="caption-text-2">Series</p>
+        </div>
+        <div class="image-holder">
+          <img src="https://www.maxx-xs.nl/images/visuals/visual_mxmid_279932.jpeg">
+          <p class="caption-text-1">Back To Corsica</p>
+          <p class="caption-text-2">Series</p>
+        </div>
+        <div class="image-holder">
+          <img src="https://www.maxx-xs.nl/images/visuals/visual_mxmid_279726.jpeg">
+          <p class="caption-text-1">Wasp</p>
+          <p class="caption-text-2">Film</p>
+        </div>
+        <div class="image-holder">
+          <img src="https://www.maxx-xs.nl/images/visuals/visual_mxmid_278428.jpeg">
+          <p class="caption-text-1">No Look Pass</p>
+          <p class="caption-text-2">Documentary</p>
+        </div>
+      </div>
+    </div>
+    <!-- -----------------------------character section------------------------------------- -->
+    <div class="character-container">
+      <div class="wrapper">
+        <ul class="carousel" id="character-slider" data-target="carousel">
+          <li class="card" data-target="card"><img class="item"
+              src="https://www.maxx-xs.nl/images/covers/large/cover_279882_back.png"></li>
+          <li class="card" data-target="card"><img class="item"
+              src="https://www.maxx-xs.nl/images/covers/large/cover_279780_back.png"></li>
+          <li class="card" data-target="card"><img class="item"
+              src="https://www.maxx-xs.nl/images/covers/large/cover_279936_back.png"></li>
+          <li class="card" data-target="card"><img class="item"
+              src="https://www.maxx-xs.nl/images/covers/large/cover_279912_back.png"></li>
+          <li class="card" data-target="card"><img class="item"
+              src="https://www.maxx-xs.nl/images/covers/large/cover_279908_back.png"></li>
+          <li class="card" data-target="card"><img class="item"
+              src="https://www.maxx-xs.nl/images/covers/large/cover_279894_back.png"></li>
+          <li class="card" data-target="card"><img class="item"
+              src="https://www.maxx-xs.nl/images/covers/large/cover_279876_back.png"></li>
+        </ul>
+        <div class="button-wrapper">
+          <div (click)="this.SliderArrowClicked('left','character-slider')" data-action="slideLeft"
+            class="left-arrow-box"><span class="arrow arrow-left"></span></div>
+          <div (click)="this.SliderArrowClicked('right','character-slider')" data-action="slideRight"
+            class="right-arrow-box"><span class="arrow arrow-right"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------x----------------character section---------------x---------------------- -->
+    <!-- ---------------------------------listing category section --------------------------- -->
+    <div class="category-container">
+      <div class="category-header">
+        <h4 class="category-name">Series</h4>
+      </div>
+      <div class="category-control">
+        <div class="category-control-container">
+          <i class="fa fa-play-circle"></i>
+          <i class="fa fa-film"></i>
+          <i class="fa fa-heart"></i>
+        </div>
+      </div>
+      <div class="category-slider">
+        <div class="">
+          <div class="left-arrow-box" (click)="this.SliderArrowClicked('left','series')"><span
+              class="arrow arrow-left"></span></div>
+          <div class="right-arrow-box" (click)="this.SliderArrowClicked('right','series')"><span
+              class="arrow arrow-right"></span></div>
+          <ul class="carousel" id="series">
+            <li *ngFor="let serie of series;let i = index">
+              <div class="category-item-box">
+                <img src="{{serie.poster}}">
+                <div class="category-item-caption-holder">
+                  <div class="category-item-title">{{serie.Title}}</div>
+                  <div class="category-item-type">series</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="category-container">
+      <div class="category-header">
+        <h4 class="category-name">Flims</h4>
+      </div>
+      <div class="category-control">
+        <div class="category-control-container">
+          <i class="fa fa-play-circle"></i>
+          <i class="fa fa-film"></i>
+          <i class="fa fa-heart"></i>
+        </div>
+      </div>
+      <div class="category-slider">
+        <div class="">
+          <div class="left-arrow-box" (click)="this.SliderArrowClicked('left','films')"><span
+              class="arrow arrow-left"></span></div>
+          <div class="right-arrow-box" (click)="this.SliderArrowClicked('right','films')"><span
+              class="arrow arrow-right"></span></div>
+          <ul class="carousel" id="films">
+            <li *ngFor="let film of films;let i = index">
+              <div class="category-item-box">
+                <img src="{{film.poster}}">
+                <div class="category-item-caption-holder">
+                  <div class="category-item-title">{{film.Title}}</div>
+                  <div class="category-item-type">film</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="category-container">
+      <div class="category-header">
+        <h4 class="category-name">Documentary</h4>
+      </div>
+      <div class="category-control">
+        <div class="category-control-container">
+          <i class="fa fa-play-circle"></i>
+          <i class="fa fa-film"></i>
+          <i class="fa fa-heart"></i>
+        </div>
+      </div>
+      <div class="category-slider">
+        <div class="">
+          <div class="left-arrow-box" (click)="this.SliderArrowClicked('left','doc')"><span
+              class="arrow arrow-left"></span></div>
+          <div class="right-arrow-box" (click)="this.SliderArrowClicked('right','doc')"><span
+              class="arrow arrow-right"></span></div>
+          <ul class="carousel" id="doc">
+            <li *ngFor="let documentary of documentaries;let i = index">
+              <div class="category-item-box">
+                <img src="{{documentary.poster}}">
+                <div class="category-item-caption-holder">
+                  <div class="category-item-title">{{documentary.Title}}</div>
+                  <div class="category-item-type">documentary</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="category-container">
+      <div class="category-header">
+        <h4 class="category-name">Series</h4>
+      </div>
+      <div class="category-control">
+        <div class="category-control-container">
+          <i class="fa fa-play-circle"></i>
+          <i class="fa fa-film"></i>
+          <i class="fa fa-heart"></i>
+        </div>
+      </div>
+      <div class="category-slider">
+        <div class="">
+          <div class="left-arrow-box" (click)="this.SliderArrowClicked('left','cat1')"><span
+              class="arrow arrow-left"></span></div>
+          <div class="right-arrow-box" (click)="this.SliderArrowClicked('right','cat1')"><span
+              class="arrow arrow-right"></span></div>
+          <ul class="carousel" id="cat1">
+            <li *ngFor="let serie of series;let i = index">
+              <div class="category-item-box">
+                <img src="{{serie.poster}}">
+                <div class="category-item-caption-holder">
+                  <div class="category-item-title">{{serie.Title}}</div>
+                  <div class="category-item-type">series</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="category-container">
+      <div class="category-header">
+        <h4 class="category-name">Flims</h4>
+      </div>
+      <div class="category-control">
+        <div class="category-control-container">
+          <i class="fa fa-play-circle"></i>
+          <i class="fa fa-film"></i>
+          <i class="fa fa-heart"></i>
+        </div>
+      </div>
+      <div class="category-slider">
+        <div class="">
+          <div class="left-arrow-box" (click)="this.SliderArrowClicked('left','cat2')"><span
+              class="arrow arrow-left"></span></div>
+          <div class="right-arrow-box" (click)="this.SliderArrowClicked('right','cat2')"><span
+              class="arrow arrow-right"></span></div>
+          <ul class="carousel" id="cat2">
+            <li *ngFor="let film of films;let i = index">
+              <div class="category-item-box">
+                <img src="{{film.poster}}">
+                <div class="category-item-caption-holder">
+                  <div class="category-item-title">{{film.Title}}</div>
+                  <div class="category-item-type">film</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="category-container">
+      <div class="category-header">
+        <h4 class="category-name">Documentary</h4>
+      </div>
+      <div class="category-control">
+        <div class="category-control-container">
+          <i class="fa fa-play-circle"></i>
+          <i class="fa fa-film"></i>
+          <i class="fa fa-heart"></i>
+        </div>
+      </div>
+      <div class="category-slider">
+        <div class="">
+          <div class="left-arrow-box" (click)="this.SliderArrowClicked('left','cat3')"><span
+              class="arrow arrow-left"></span></div>
+          <div class="right-arrow-box" (click)="this.SliderArrowClicked('right','cat3')"><span
+              class="arrow arrow-right"></span></div>
+          <ul class="carousel" id="cat3">
+            <li *ngFor="let documentary of documentaries;let i = index">
+              <div class="category-item-box">
+                <img src="{{documentary.poster}}">
+                <div class="category-item-caption-holder">
+                  <div class="category-item-title">{{documentary.Title}}</div>
+                  <div class="category-item-type">documentary</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- --------------x-------------------listing category section -----x---------------------- -->
+  </main>
+  <!-----------------------------------footer-------------------------------------------------- -->
+  <footer>
+    <div class="footer-container">
+      <div class="box">
+        <div> <i class="fa fa-film"></i></div>
+        <h2>FeedBack</h2>
+        <p>Do you have any FeedBack?</p>
+        <p>Please share it with us.</p>
+      </div>
+      <div class="box">
+        <div> <i class="fa fa-film"></i></div>
+        <h2>Help Center</h2>
+        <p>Ran into troubles?</p>
+        <p>Read our FAQ.</p>
+      </div>
+      <div class="box">
+        <i class="fa fa-film"></i>
+        <h2>Contact</h2>
+        <p>Prefer direct contact?</p>
+        <p>Message our helpdesk.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <ul class="bottom-items">
+        <li><a>Terms and Conditions</a></li>
+        <li><a>Privacy Policy</a></li>
+        <li><a>Cookie Policy</a></li>
+        <li><a>About</a></li>
+        <li><a>Colophon</a></li>
+        <li><a>Relase Notes</a></li>
+      </ul>
+    </div>
+  </footer>
+  <!-----------------x------------------footer--------------------------x------------------------ -->
+  <script src="../assets/js/home.js"></script>
+  <!-- -------------x-------------main section-------------------------x------------------->
+</body>
+
+</html>
